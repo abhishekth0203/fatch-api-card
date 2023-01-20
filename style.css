@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(aqua, green, pink, gray, red);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    background-repeat: no-repeat;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section {
+    display: flex;
+    padding: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+div {
+    background-image: linear-gradient(purple, aqua);
+    padding: 10px;
+    width: 200px;
+    transition: all 0.1s;
+    flex-grow: 1;
+}
+
+div:hover {
+    transform: scale(1.1);
+}
+
+div:hover a {
+    display: block;
+}
+
+div h1 {
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+ div a {
+    transition-property: all;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    font-size: 18px;
+    display: none;
+    border-bottom: 3px solid transparent;
+ }
+
+ div a:hover {
+    font-size: 19px;
+    border-bottom: 3px solid purple;
+ }
+ img {
+    width: 100%;
+ }
+
+ footer {
+    background-color: rgb(255,255,255);
+
+    display: flex;
+
+    align-items: center;
+    border-top: 5px solid rgba(44,0,44,0.089);
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+
+ }
+
+ footer ul {
+    display: flow-root;
+    gap: 200px;
+    list-style-type: none;
+    display: none;
+ }
+
+ footer h3 {
+    font-size: 24px;
+ }
+
+ footer ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+ }
+ 
+ footer ul li a:hover {
+     text-decoration: underline;
+    }
+    
+ /* 480px, 768px, 1024px, and 1280px */
+
+
+ /* media-query for mobilephone */
+
+ @media screen and (max-width: 480px) {
+    section {
+        padding: 50px 30px;
+        gap: 0px;
+    }
+    div {
+        transform: scale(0.8);
+    }
+    
+ }
+
+
+ /* media-query for tablets */
+
+
+ @media screen and (min-width:481px) and (max-width: 768px){
+    section {
+        padding: 40px 30px;
+        gap: 0px;
+    }   
+    div {
+        transform: scale(0.9);
+    }
+    div:hover {
+        transform: scale(1.01);
+    }
+ }
+
+ /* media-query for desktop */
+ @media  screen and (min-width: 769px) {
+    
+ }
